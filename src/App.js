@@ -9,6 +9,8 @@ import Footer from "./Components/Footer";
 // pages
 import Home from "./Pages/Home";
 import VolcanoList from "./Pages/VolcanoList";
+import Login from "./Pages/Login";
+import Register from"./Pages/Register";
 
 
 
@@ -21,6 +23,10 @@ function App() {
        <Routes>
          <Route path="/" element={<Home />} />
          <Route path="/VolcanoList" element={<VolcanoList />} />
+
+         <Route path="/Login" element={<Login/>} />
+         <Route path="/Register" element={<Register/>} />
+         
        </Routes>
 
 

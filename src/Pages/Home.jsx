@@ -20,7 +20,6 @@ export default function Home() {
         <br/> Volcanoes play a crucial role in the Earth's geological processes, from the recycling of materials to the formation of new landmasses. They are also sources of immense natural resources, including fertile soils, geothermal energy, and valuable minerals.
         
         </p>
-        
         <a href="/menu">Menu</a>
         <a href="/book">Book</a>
       </div>

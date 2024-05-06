@@ -4,16 +4,18 @@ export default function Footer(){
         <footer>
             <h1>QUT</h1>
 
-            <div className="fullname">
+            {/* <div className="fullname">
                 <p1>Alireza Saeb</p1>
-            </div>
+                
+            </div> */}
+
             <div className="id">
-               <p1> N11266139 </p1> 
+               <p1> Alireza Saeb / N11266139 / CAB230 </p1> 
             </div>
             
-            <div className="unit">
+            {/* <div className="unit">
                 <p1>CAB230</p1>
-            </div>
+            </div> */}
             
         </footer>
     );
