@@ -4,7 +4,6 @@ export default function Home() {
     return (
       <main>
         <Volcanos />
-        {/* <Pictures /> */}
       </main>
     );
   }
@@ -20,22 +19,13 @@ export default function Home() {
         <br/> Volcanoes play a crucial role in the Earth's geological processes, from the recycling of materials to the formation of new landmasses. They are also sources of immense natural resources, including fertile soils, geothermal energy, and valuable minerals.
         
         </p>
-        <a href="/menu">Menu</a>
-        <a href="/book">Book</a>
+        {/* <a href="/menu">Menu</a>
+        <a href="/book">Book</a> */}
       </div>
+      
+      {/* <div className="pic">
+          <img src="img/vol.jpg" alt="Photo" />
+        </div> */}
+        
     </section>
   );
-
-   // Pictures content
-  //  const Pictures = () => (
-  //   <section className="hero">
-  //     {/* content for the hero */}
-  //     <div className="hero_content">
-  //       <h1 className="hero_title">Volcanos of the World </h1>
-  //       <p className="hero_subtitle">A fine dining experience</p>
-  
-  //       <a href="/menu">Menu</a>
-  //       <a href="/book">Book</a>
-  //     </div>
-  //   </section>
-  // );

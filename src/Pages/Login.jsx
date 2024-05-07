@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -36,25 +35,34 @@ const Login = () => {
   };
 
   return (
-    <div className="auth-page">
+    <div className="Login">
       <div className="auth-form-container">
+      <div className="icon1">
+          <img src="img/images.png" alt="Icon" />
+        </div>
         <h2>Login</h2>
         <form onSubmit={handleLogin} className="auth-form">
           {error && <p className="error">{error}</p>}
-          <input
-            type="email"
-            placeholder="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-          <input
-            type="password"
-            placeholder="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
+          <div>
+            <label>Email:</label>
+            <input
+              type="email"
+              placeholder="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </div>
+          <div>
+            <label>Password:</label>
+            <input
+              type="password"
+              placeholder="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
           <button type="submit">Login</button>
         </form>
       </div>
