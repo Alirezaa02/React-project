@@ -16,7 +16,7 @@ const Login = () => {
 
     try {
       const response = await fetch("http://4.237.58.241:3000/user/login", {
-        method: "POST",
+        method: "POST", // *GET, POST, PUT, DELETE, etc.
         headers: {
           "Content-Type": "application/json",
         },

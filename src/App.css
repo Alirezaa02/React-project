@@ -130,7 +130,7 @@
 .Volcanos{
   background-image: url('vol.jpg');
   width: 100%;
-  height: 400px;
+  height: 53px;
   background-size: cover;
 }
 .Volcanos_subtitle {
@@ -233,4 +233,45 @@ label {
     margin-bottom: 2px;
   }
 
+}
+
+/* Table */
+.Table{
+  height: 400px; 
+  width: '100%'; 
+}
+
+/* VolcanoList */
+
+.volcano-list {
+  margin: 30px auto;
+  width: 70%; 
+}
+
+.filters {
+  margin-bottom: 20px;
+}
+
+.filter-label {
+  margin-right: 10px;
+}
+
+.filter-select-country,
+.filter-select-populated {
+  margin-right: 10px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.search-button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color:  #0056b3;;
+  color: white;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #dc05dc;
 }

@@ -6,11 +6,15 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 
+
+
 // pages
 import Home from "./Pages/Home";
 import VolcanoList from "./Pages/VolcanoList";
 import Login from "./Pages/Login";
 import Register from"./Pages/Register";
+
+
 
 
 

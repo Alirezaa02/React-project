@@ -4,6 +4,7 @@ export default function Home() {
     return (
       <main>
         <Volcanos />
+     
       </main>
     );
   }
@@ -19,13 +20,15 @@ export default function Home() {
         <br/> Volcanoes play a crucial role in the Earth's geological processes, from the recycling of materials to the formation of new landmasses. They are also sources of immense natural resources, including fertile soils, geothermal energy, and valuable minerals.
         <br/> Volcanoes are not only significant geological features but also cultural icons, deeply embedded in the histories and mythologies of many societies around the world. They have inspired awe, fear, and reverence in human cultures for millennia, often being regarded as the domains of gods or spirits. Despite their inherent dangers, people have been drawn to volcanoes, living in their shadows and harnessing their resources for survival and prosperity. As our understanding of these enigmatic giants grows, so too does our appreciation for their role in shaping our planet and enriching our lives. Whether studying their inner workings, marveling at their beauty, or harnessing their power, the allure of volcanoes continues to captivate scientists, adventurers, and dreamers alike.
         </p>
+      
+
+        
         {/* <a href="/menu">Menu</a>
         <a href="/book">Book</a> */}
       </div>
       
-      {/* <div className="pic">
-          <img src="img/vol.jpg" alt="Photo" />
-        </div> */}
+     
         
     </section>
   );
+  
