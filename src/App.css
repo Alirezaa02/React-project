@@ -67,9 +67,8 @@
  
 }
 
+
 /* Pages */
-
-
 
 /* Footer CSS Code */
  footer {
@@ -79,7 +78,7 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 100px; /* Adjust the height as needed */
+    height: 100px; 
   
   
  }
@@ -294,6 +293,11 @@ label {
 .volcano-details {
   flex: 1; 
   margin-right: 20px; /* spacing between details and map */
+
+  h1{
+    color: #007bff;
+    font-style: italic;
+  }
 }
 
 .map-container {

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import "../App.css";
 import VolcTable from "./VolcTable";
 
-
 const VolcanoList = () => {
   const [volcanoes, setVolcanoes] = useState([]);
   const [countriesList, setCountriesList] = useState([]);

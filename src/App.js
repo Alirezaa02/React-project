@@ -16,20 +16,15 @@ import VolcanoDetail from "./Pages/VolcanoDetail";
 
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  const handleLogout = () => {
-    // Perform logout actions, e.g., clear local storage, reset state, etc.
-    setIsLoggedIn(false);
-  };
+ 
 
   return (
     <BrowserRouter>
       <div className="App">
-        <Header isLoggedIn={isLoggedIn} onLogout={handleLogout} />
+        <Header  />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/Login" element={<Login onLogin={() => setIsLoggedIn(true)} />} />
+          <Route path="/Login" element={<Login />} />
           <Route path="/Register" element={<Register />} />
           <Route path="/VolcanoList" element={<VolcanoList />} />
           <Route path="/volcano/:id" element={<VolcanoDetail />} />

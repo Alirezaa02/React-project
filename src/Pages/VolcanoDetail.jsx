@@ -22,31 +22,36 @@ const VolcanoDetail = () => {
   }, [id]);
 
   return (
-    <div className="volcano-detail-container">
-      <div className="volcano-details">
-        <h1>Volcano Details</h1>
-        {volcano && (
-          <>
-            <p>Name: {volcano.name}</p>
-            {volcano.country && <p>Country: {volcano.country}</p>}
-            <p>Region: {volcano.region}</p>
-            <p>Subregion: {volcano.subregion}</p>
-            <p>Last Eruption: {volcano.lastEruption}</p>
-            <p>Summit: {volcano.summit}</p>
-            <p>Elevation: {volcano.elevation}</p>
-          </>
-        )}
-
-
-                               {/* Map  */}
-      </div>
-      {volcano && (
-        <div className="map-container">
-          <Map center={[parseFloat(volcano.latitude), parseFloat(volcano.longitude)]} zoom={10} height={400} width={400}>
-            <Marker anchor={[parseFloat(volcano.latitude), parseFloat(volcano.longitude)]}  />
-          </Map>
+    <div className="container">
+      <div className="row">
+        <div className="col-md-6">
+          <div className="volcano-detail-container">
+            <div className="volcano-details">
+              <h1>Volcano Details</h1>
+              {volcano && (
+                <>
+                  <p>Name: {volcano.name}</p>
+                  {volcano.country && <p>Country: {volcano.country}</p>}
+                  <p>Region: {volcano.region}</p>
+                  <p>Subregion: {volcano.subregion}</p>
+                  <p>Last Eruption: {volcano.lastEruption}</p>
+                  <p>Summit: {volcano.summit}</p>
+                  <p>Elevation: {volcano.elevation}</p>
+                </>
+              )}
+            </div>
+          </div>
         </div>
-      )}
+        <div className="col-md-6">
+          {volcano && (
+            <div className="map-container">
+              <Map center={[parseFloat(volcano.latitude), parseFloat(volcano.longitude)]} zoom={10} height={400} width={400}>
+                <Marker anchor={[parseFloat(volcano.latitude), parseFloat(volcano.longitude)]} color="red"  />
+              </Map>
+            </div>
+          )}
+        </div>
+      </div>
     </div>
   );
 };

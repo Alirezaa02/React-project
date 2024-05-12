@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { setToken } from '../Components/authentication';
+
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -33,10 +35,11 @@ const Login = () => {
 
       // Store JWT token in local storage upon successful login
       const data = await response.json();
-      localStorage.setItem("jwtToken", data.token);
-
+      setToken(data.token);
+      // window.location.reload();
       // Redirect to VolcanoList page after successful login
       navigate("/VolcanoList");
+      window.location.reload();
 
     } catch (err) {
       setError(err.message || "Failed to login.");
