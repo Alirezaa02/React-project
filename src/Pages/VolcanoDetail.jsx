@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { Map, Marker } from "pigeon-maps";
 
 const VolcanoDetail = () => {
   const [volcano, setVolcano] = useState(null);
@@ -21,18 +22,30 @@ const VolcanoDetail = () => {
   }, [id]);
 
   return (
-    <div>
-      <h1>Volcano Details</h1>
+    <div className="volcano-detail-container">
+      <div className="volcano-details">
+        <h1>Volcano Details</h1>
+        {volcano && (
+          <>
+            <p>Name: {volcano.name}</p>
+            {volcano.country && <p>Country: {volcano.country}</p>}
+            <p>Region: {volcano.region}</p>
+            <p>Subregion: {volcano.subregion}</p>
+            <p>Last Eruption: {volcano.lastEruption}</p>
+            <p>Summit: {volcano.summit}</p>
+            <p>Elevation: {volcano.elevation}</p>
+          </>
+        )}
+
+
+                               {/* Map  */}
+      </div>
       {volcano && (
-        <>
-          <p>Name: {volcano.name}</p>
-          <p>Country: {volcano.country}</p>
-          <p>Region: {volcano.region}</p>
-          <p>Subregion: {volcano.subregion}</p>
-          <p>Last Eruption: {volcano.lastEruption}</p>
-          <p>Summit: {volcano.summit}</p>
-          <p>Elevation: {volcano.elevation}</p>
-        </>
+        <div className="map-container">
+          <Map center={[parseFloat(volcano.latitude), parseFloat(volcano.longitude)]} zoom={10} height={400} width={400}>
+            <Marker anchor={[parseFloat(volcano.latitude), parseFloat(volcano.longitude)]}  />
+          </Map>
+        </div>
       )}
     </div>
   );

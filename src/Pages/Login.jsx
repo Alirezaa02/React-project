@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const navigate = useNavigate(); // Access navigate function for redirection
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -16,19 +18,26 @@ const Login = () => {
 
     try {
       const response = await fetch("http://4.237.58.241:3000/user/login", {
-        method: "POST", // *GET, POST, PUT, DELETE, etc.
+        method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ email, password }),
       });
-      const data = await response.json();
 
       if (!response.ok) {
+        // Handle login failure
+        const data = await response.json();
         throw new Error(data.message || "An error occurred.");
       }
 
-      console.log("Login done:", data);
+      // Store JWT token in local storage upon successful login
+      const data = await response.json();
+      localStorage.setItem("jwtToken", data.token);
+
+      // Redirect to VolcanoList page after successful login
+      navigate("/VolcanoList");
+
     } catch (err) {
       setError(err.message || "Failed to login.");
     }
@@ -37,7 +46,7 @@ const Login = () => {
   return (
     <div className="Login">
       <div className="auth-form-container">
-      <div className="icon1">
+        <div className="icon1">
           <img src="img/images.png" alt="Icon" />
         </div>
         <h2>Login</h2>

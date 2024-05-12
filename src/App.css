@@ -236,34 +236,42 @@ label {
 }
 
 /* Table */
-.Table{
-  height: 400px; 
-  width: '100%'; 
-}
-
-/* VolcanoList */
-
 .volcano-list {
-  margin: 30px auto;
-  width: 70%; 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  align-items: center;
+  height: 100vh; 
 }
 
+/* VolcTable */
+.Table {
+  height: 400px; 
+  width: 100%; 
+  margin-top: 50px; 
+}
+
+/* Filters */
 .filters {
   margin-bottom: 20px;
 }
 
+/* Filter Labels */
 .filter-label {
   margin-right: 10px;
 }
 
+/* Select Inputs */
 .filter-select-country,
 .filter-select-populated {
   margin-right: 10px;
   padding: 5px;
-  border-radius: 5px;
+  border-radius: 40px;
 }
 
+/* Search Button */
 .search-button {
+  margin-top: 80px;
   padding: 5px 10px;
   border: none;
   border-radius: 5px;
@@ -274,4 +282,34 @@ label {
 
 .search-button:hover {
   background-color: #dc05dc;
+}
+
+
+/* VolcanoDetail */
+.volcano-detail-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.volcano-details {
+  flex: 1; 
+  margin-right: 20px; /* spacing between details and map */
+}
+
+.map-container {
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  .volcano-detail-container {
+    flex-direction: column; 
+  }
+
+  .map-container {
+    margin-top: 10px;
+    width: 1000%; /* Set map container width to 100% on smaller screens */
+    height: 300px; /* Adjust height as needed */
+  }
 }
