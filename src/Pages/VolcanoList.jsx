@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../App.css";
 import VolcTable from "./VolcTable";
+import { Link } from "react-router-dom";
 
 const VolcanoList = () => {
   const [volcanoes, setVolcanoes] = useState([]);
@@ -52,7 +53,7 @@ const VolcanoList = () => {
   };
 
   const handleSearch = () => {
-    // You can implement search functionality here if needed
+    
   };
 
   return (
@@ -94,6 +95,9 @@ const VolcanoList = () => {
       </div>
 
       <VolcTable volcanoes={volcanoes} />
+
+    
+
     </div>
   );
 };
